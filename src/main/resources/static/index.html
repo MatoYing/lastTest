@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>bu</title>
+</head>
+<body>
+    <p>简易设备资产管理系统</p>
+    <form name="log_in" method="post">
+        账号：<input type="text" name="username"><br>
+        密码：<input type="text" name="password"><br>
+        <input type="button" value="登录" onclick="a1()"><br>
+        <input type="button" value="注册" onclick="a2()">
+    </form>
+
+    <!-- 跳转static下的html前面不用加html，template类似于之前的WEB-INF -->
+    <a href="/index.html">跳转测试</a>
+
+    <script>
+        function a1() {
+            document.log_in.action = "/login1.do";
+            document.log_in.submit();
+        }
+
+        function a2() {
+            document.log_in.action = "/login2.do";
+            document.log_in.submit();
+        }
+    </script>
+</body>
+</html>

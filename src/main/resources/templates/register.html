@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h5>简易设备资产管理系统</h5>
+    <form name="register_table" method="post">
+        用户名：<input type="text" name="username"><br>
+        密码：<input type="text" name="password"><br>
+        密码确认：<input type="text" name="again_password"><br>
+        真实姓名：<input type="text" name="real_name"><br>
+        联系电话：<input type="text" name="phone"><br>
+        电子邮箱：<input type="text" name="email"><br>
+        <input type="button" value="注册" onclick="a1()">
+        <input type="button" value="取消" onclick="a2()">
+    </form>
+
+
+    <script>
+        function a1() {
+            document.register_table.action="/register1.do";
+            document.register_table.submit();
+        }
+
+        function a2() {
+            document.register_table.action="/register2.do";
+            document.register_table.submit();
+        }
+    </script>
+</body>
+</html>
